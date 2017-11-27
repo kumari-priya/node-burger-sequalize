@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="text-center">
+    <img src="/assets/img/burger.png" alt="Burger" />
+    <p class="lead">Eat The Burger!</p>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <h6 class="card-subtitle mb-2 text-muted">Burgers that are not eaten!</h6>
+      <ul class="list-group">
+        {{#each burgers}}
+          {{#unless devoured}}
+            {{> burgers/burger-block devoured=false}}
+          {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
+
+    <div class="col-md-6">
+      <h6 class="card-subtitle mb-2 text-muted">Burgers that are eaten!</h6>
+      <ul class="list-group eaten">
+        {{#each burgers}}
+          {{#if devoured}}
+            {{> burgers/burger-block devoured=true}}
+          {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <center>
+        <form class="create-form">
+          <div class="form-group">
+            <textarea class="form-control area" rows="2" id="burger" name="name" maxlength="200" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <p>Enter a burger you want to eat click the "Submit" button</p>
+      </center>
+    </div>
+  </div>
+  <!-- <footer class="footer text-center">
+       <p>&copy; Kumari Priya</p>
+     </footer> -->
+
+</div>
+</div>
