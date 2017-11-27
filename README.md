@@ -1,1 +1,1 @@
-# node-burger-sequalize
+# node-burger-sequalize-homework
