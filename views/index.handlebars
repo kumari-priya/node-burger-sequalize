@@ -8,7 +8,7 @@
     <div class="col-md-6">
       <h6 class="card-subtitle mb-2 text-muted">Burgers that are not eaten!</h6>
       <ul class="list-group">
-        {{#each burgers}}
+        {{#each result}}
           {{#unless devoured}}
             {{> burgers/burger-block devoured=false}}
           {{/unless}}
@@ -19,7 +19,7 @@
     <div class="col-md-6">
       <h6 class="card-subtitle mb-2 text-muted">Burgers that are eaten!</h6>
       <ul class="list-group eaten">
-        {{#each burgers}}
+        {{#each result}}
           {{#if devoured}}
             {{> burgers/burger-block devoured=true}}
           {{/if}}

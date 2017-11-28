@@ -3,9 +3,11 @@ $(function() {
   $(".change-devoured").on("click", function(event) {
     var id = $(this).data("id");
     var newDevoured = $(this).data("devoured");
+    var person = $("person"+id);
 
     var newDevouredState = {
-      devoured: !newDevoured
+      devoured: !newDevoured,
+      name: person.text()
     };
 
     // Send the PUT request.
