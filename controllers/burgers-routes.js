@@ -32,7 +32,9 @@ app.post("/api/burgers", function(req, res) {
 
 app.put("/api/burgers/:id", function(req, res) {
   db.Burger.update(
-    req.body,
+  {  devoured: req.body.devoured,
+    name: req.body.name
+  },
  {
     where: {
       id: req.body.id
