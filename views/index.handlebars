@@ -10,7 +10,7 @@
       <ul class="list-group">
         {{#each result}}
           {{#unless devoured}}
-            {{> burgers/burger-block devoured=false}}
+            {{> burgers/burger-block}}
           {{/unless}}
         {{/each}}
       </ul>
@@ -21,7 +21,7 @@
       <ul class="list-group eaten">
         {{#each result}}
           {{#if devoured}}
-            {{> burgers/burger-block devoured=true}}
+            {{> burgers/burger-block}}
           {{/if}}
         {{/each}}
       </ul>
