@@ -21,7 +21,7 @@ $(function() {
       function() {
         console.log("changed devoured to", newDevoured);
         // Reload the page to get the updated list
-        //location.reload();
+        location.reload();
       }
     );
   });
