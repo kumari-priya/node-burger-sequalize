@@ -1,0 +1,12 @@
+<li class="list-group-item d-flex justify-content-between align-items-center">
+	{{id}}. {{burger_name}}
+	{{#if devoured}}
+ eaten by {{Person.name}} !
+	{{/if}}
+{{#unless devoured}}
+	<input name="person" maxlength="100" id="person{{id}}"  required></input>
+	<button class="btn btn-success btn-sm change-devoured" data-id="{{id}}" data-devoured="{{devoured}}">
+		Devour it!
+	</button>
+	{{/unless}}
+</li>
